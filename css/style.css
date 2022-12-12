@@ -1,0 +1,101 @@
+/* Google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+html,
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headerContainer{
+
+    width: min(80%, 1200px);
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    padding: 0px 15px;
+    padding-top: 10px;
+}
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+}
+.logo{
+    border: 2px solid black;
+    padding: 3px 15px;
+    border-radius: 15px;
+    box-shadow: 3px 6px 0px 0px rgb(0, 0, 0);
+    font-family: 'Major Mono Display', monospace;
+}
+.menuContainer{
+    display: flex;
+    gap: 20px;
+}
+.menuContainer > li > .menuItem{
+    text-align: center;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 3px 0px 0px rgb(0, 0, 0);
+    padding: 3px;
+    cursor: pointer;
+}
+.menuContainer > li > .menuItem > a{
+    color: black;
+    font-family: 'Major Mono Display', monospace;
+}
+.home{
+    background-color: rgba(0, 128, 0, 0.5);
+}
+.about{
+    background-color: rgba(255, 255, 0, 0.5);
+}
+.projects{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.card{
+    display: flex;
+    width: min(80%, 1200px);
+    height: 80vh;
+    justify-content: center;
+    background-color: rgb(245, 245, 220);
+    border-radius: 15px;
+    box-shadow: 4px 6px 4px 0px rgba(0, 0, 0, 0.5),
+    inset 1px 1px 2px 0px rgba(0, 0, 0, 0.1);    
+}
+@media only screen and (max-width: 768px) {
+    .logo{
+        text-align: center;
+    }
+    
+  }
+  @media only screen and (max-width: 425px) {
+    .headerWrapper{
+        justify-content: center;
+    }
+    .logo{
+    width: min-content;
+    }
+    .menuContainer{
+        display: none;
+    }
+  }
